@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="ko" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="현대오토에버 2026년 3분기 신입채용 준비를 위한 프리미엄 원스톱 가이드">
+  <meta name="theme-color" content="#020a1c">
+  <title>EVER:READY V2 — 현대오토에버 지원 원스톱 대시보드</title>
+  <!-- Google Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800;900&family=Inter:wght@300;400;600;700;800&family=Noto+Sans+KR:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">본문 바로가기</a>
+
+  <header class="topbar">
+    <div class="brand-cluster">
+      <a class="brand" href="#home" aria-label="처음으로">
+        <div class="brand-logo">
+          <span class="brand-mark">E</span>
+        </div>
+        <div class="brand-text">
+          <span class="title">EVER:READY</span>
+          <span class="version">V2.0 PRO</span>
+        </div>
+      </a>
+      <a class="creator-link" href="https://www.youtube.com/channel/UCfJNsyr7DM8jcE0rsRE6BKA" target="_blank" rel="noreferrer" aria-label="무자본청년 유튜브 채널 열기">
+        <span class="youtube-mark"><span class="material-symbols-rounded">play_arrow</span></span>
+        <span>무자본청년</span>
+        <span class="material-symbols-rounded link-arrow">north_east</span>
+      </a>
+    </div>
+    <nav class="desktop-nav" aria-label="주요 메뉴">
+      <a href="#route"><span class="nav-num">01</span>직무 & 매칭</a>
+      <a href="#check"><span class="nav-num">02</span>자가 점검</a>
+      <a href="#essay"><span class="nav-num">03</span>자소서 에디터</a>
+      <a href="#interview"><span class="nav-num">04</span>실전 면접</a>
+    </nav>
+    <div class="toolbar">
+      <button class="theme-toggle-btn" id="themeToggle" type="button" aria-label="테마 전환" title="테마 전환">
+        <span class="material-symbols-rounded dark-icon">dark_mode</span>
+        <span class="material-symbols-rounded light-icon">light_mode</span>
+      </button>
+      <button class="icon-button" id="shareButton" type="button" aria-label="가이드 공유" title="대시보드 공유">
+        <span class="material-symbols-rounded">share</span>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-grid">
+        <div class="hero-content">
+          <div class="badge-live">
+            <span class="live-dot"></span>
+            <span class="badge-text">2026 3Q HYUNDAI AUTOEVER RECRUITMENT</span>
+          </div>
+          <h1>막막함을 지우고,<br><span>지원할 근거</span>를 연결하세요.</h1>
+          <p class="hero-copy">현대오토에버가 찾는 모빌리티 기술 방향성과 당신의 경험을 매끄럽게 잇는 초개인화 하이테크 대시보드입니다. 합격 가설을 지금 구축해 보세요.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#route">내 지원 방향 찾기 <span class="material-symbols-rounded">arrow_forward</span></a>
+            <a class="button ghost" href="https://career.hyundai-autoever.com/ko/newrecruit" target="_blank" rel="noreferrer">공식 채용 페이지 <span class="material-symbols-rounded">open_in_new</span></a>
+          </div>
+          <p class="micro"><span class="material-symbols-rounded">info</span> 마감 시각, 모집 분야, 근무지 등은 공식 홈페이지의 최종 공고를 기준으로 확인해야 합니다.</p>
+        </div>
+        <aside class="deadline-card" aria-label="채용 마감 안내">
+          <div class="deadline-top">
+            <span class="label">APPLICATION CLOSES IN</span>
+            <span class="status-badge">ACTIVE</span>
+          </div>
+          <div class="d-day-display">
+            <span class="d-day" id="dDay">D--</span>
+          </div>
+          <div class="deadline-date-box">
+            <span class="material-symbols-rounded">calendar_today</span>
+            <p class="date-text">2026. 07. 13. 월 · 13:00 마감</p>
+          </div>
+          <div class="countdown-display" id="countdown" aria-live="polite">
+            <div class="cd-item"><strong class="cd-num">00</strong><span class="cd-label">일</span></div>
+            <div class="cd-item"><strong class="cd-num">00</strong><span class="cd-label">시간</span></div>
+            <div class="cd-item"><strong class="cd-num">00</strong><span class="cd-label">분</span></div>
+            <div class="cd-item"><strong class="cd-num">00</strong><span class="cd-label">초</span></div>
+          </div>
+          <div class="deadline-tip">
+            <span class="tip-icon"><span class="material-symbols-rounded">warning</span></span>
+            <p class="tip-text"><b>권장 안정 제출:</b> 7월 12일 일요일 18:00<br>마감 직전에는 서버 폭주 우려가 있습니다.</p>
+          </div>
+        </aside>
+      </div>
+      <div class="fact-strip">
+        <div class="fact-item">
+          <div class="fact-icon-wrapper"><span class="material-symbols-rounded">school</span></div>
+          <div class="fact-desc"><b>학사·석사 취득자</b><small>기졸업 또는 ’26.8 졸업예정</small></div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon-wrapper"><span class="material-symbols-rounded">psychology</span></div>
+          <div class="fact-desc"><b>전공 무관 열린 채용</b><small>직무에 연결된 경험이 핵심</small></div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon-wrapper"><span class="material-symbols-rounded">badge</span></div>
+          <div class="fact-desc"><b>신입 정규직 채용</b><small>30대 초반 및 중고신입 기회 활짝</small></div>
+        </div>
+        <div class="fact-item">
+          <div class="fact-icon-wrapper"><span class="material-symbols-rounded">code_blocks</span></div>
+          <div class="fact-desc"><b>전형별 테스트 진행</b><small>코딩테스트 또는 과제 전형 필수</small></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 01: Direction Section (HUD Simulator Embedded) -->
+    <section class="section intro" id="route">
+      <div class="section-heading">
+        <div class="heading-left">
+          <p class="eyebrow"><span class="step-badge">STEP 01</span> PROFILE & DIRECTION</p>
+          <h2>나의 조건과 지원 직무를 조율하세요.</h2>
+        </div>
+        <p class="heading-desc">나의 현재 상태와 주무기를 선택하면, 실시간 HUD 시뮬레이터가 지원 적합성과 전략적 타겟을 즉각적으로 판독해 드립니다.</p>
+      </div>
+
+      <div class="profile-panel glass-panel">
+        <div class="profile-inputs">
+          <div class="profile-copy">
+            <div class="profile-num">01</div>
+            <div class="profile-title-area">
+              <h3>지원 프로필 설정</h3>
+              <p>선택 조건은 브라우저에 안전하게 자동 저장됩니다.</p>
+            </div>
+          </div>
+          <div class="profile-fields">
+            <div class="filter-group">
+              <span class="material-symbols-rounded select-icon">person</span>
+              <label>현재 나의 상태
+                <select id="profileStatus">
+                  <option value="student">졸업예정·취업준비 (신입 지원)</option>
+                  <option value="graduate">기졸업·첫 취업 (신입 지원)</option>
+                  <option value="career">직장경험 보유 (중고신입 지원)</option>
+                  <option value="switch">비전공·직무전환 (도전 지원)</option>
+                </select>
+              </label>
+            </div>
+            <div class="filter-group">
+              <span class="material-symbols-rounded select-icon">military_tech</span>
+              <label>나의 대표 강점
+                <select id="profileStrength">
+                  <option value="build">직접 구현한 프로젝트 결과물</option>
+                  <option value="operate">시스템 가동성 & 장애 대응</option>
+                  <option value="data">데이터 가공 & 분석 개선</option>
+                  <option value="collab">협업 조율 & 기획 소통</option>
+                </select>
+              </label>
+            </div>
+          </div>
+        </div>
+        
+        <!-- HUD Real-Time Suitability Analyzer Panel -->
+        <div class="eligibility-hud" id="eligibilityHud">
+          <div class="hud-scanner"></div>
+          <div class="hud-header">
+            <span class="hud-title">REAL-TIME SUITABILITY ANALYZER</span>
+            <div class="hud-badge-container">
+              <span class="hud-status-light blinking-green"></span>
+              <span class="hud-status-text">ACTIVE</span>
+            </div>
+          </div>
+          <div class="hud-body">
+            <div class="hud-main-result">
+              <div class="hud-badge" id="hudStatusBadge">CHECKING</div>
+              <div class="hud-percent-container">
+                <span class="hud-label">적합도 지수</span>
+                <div class="hud-percent-bar">
+                  <div class="hud-bar-fill" id="hudBarFill"></div>
+                </div>
+              </div>
+            </div>
+            <div class="hud-tips-box">
+              <div class="hud-tip-title">
+                <span class="material-symbols-rounded text-lime">psychology_alt</span>
+                <span>오토에버 합격 전략 가이드</span>
+              </div>
+              <p id="hudTipText">프로필 판독 시스템을 가동 중입니다...</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Target Map Cards (Target & Opportunities) -->
+      <div class="target-grid" id="targetMap">
+        <div class="target-card glass-panel" id="targetCardStudent" data-target-fit="student">
+          <div class="neon-line"></div>
+          <span class="material-symbols-rounded target-icon">face</span>
+          <h3>신입 · 졸업 예정자</h3>
+          <p class="target-eligibility">기졸업자 및 26년 8월 이내 취득 예정자 대상</p>
+          <ul class="target-points">
+            <li><b>기술 역량 조기 검증:</b> 코딩테스트/과제 전형 안정선 통과가 필수</li>
+            <li><b>학벌보다 결과물:</b> 전공보다 직접 개발 및 완성한 프로젝트 산출물 중시</li>
+          </ul>
+        </div>
+        
+        <div class="target-card glass-panel" id="targetCardCareer" data-target-fit="career">
+          <div class="neon-line"></div>
+          <span class="material-symbols-rounded target-icon">work_history</span>
+          <h3>30대 초반 · 중고신입</h3>
+          <p class="target-eligibility">나이 제한 없음! 기존 직무 경력이 있는 중고신입 추천</p>
+          <ul class="target-points">
+            <li><b>경험 가교 강점:</b> 과거 경력을 '협업 조율 및 문제 해결' 자산으로 치환</li>
+            <li><b>성숙도 우위:</b> 팀 적응력과 장애/위기 대응 능력을 자소서 1순위로 강조</li>
+          </ul>
+        </div>
+        
+        <div class="target-card glass-panel" id="targetCardSwitch" data-target-fit="switch">
+          <div class="neon-line"></div>
+          <span class="material-symbols-rounded target-icon">alt_route</span>
+          <h3>비개발 · 문과 / 상경</h3>
+          <p class="target-eligibility">기획 · 영업 · 회계 · 노무 · HRD 등 다수 포지션 기회</p>
+          <ul class="target-points">
+            <li><b>솔루션 이해도:</b> 현대오토에버의 IT 비즈니스 모델에 관한 관심 어필</li>
+            <li><b>커뮤니케이션:</b> 협업 구조의 모호한 쟁점을 문서로 정돈하는 전달력 강조</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="track-layout">
+        <div class="track-list" role="list" aria-label="지원 직무 선택">
+          <button class="track active" data-track="mobility" type="button">
+            <span class="track-num">01</span>
+            <div class="track-info">
+              <b>모빌리티 SW</b>
+              <small>차량 연동 · 내비 · 플랫폼</small>
+            </div>
+            <span class="material-symbols-rounded track-arrow">chevron_right</span>
+          </button>
+          <button class="track" data-track="enterprise" type="button">
+            <span class="track-num">02</span>
+            <div class="track-info">
+              <b>엔터프라이즈 IT</b>
+              <small>업무 시스템 · ERP · CRM</small>
+            </div>
+            <span class="material-symbols-rounded track-arrow">chevron_right</span>
+          </button>
+          <button class="track" data-track="factory" type="button">
+            <span class="track-num">03</span>
+            <div class="track-info">
+              <b>스마트팩토리</b>
+              <small>MES · IoT · 제조 데이터</small>
+            </div>
+            <span class="material-symbols-rounded track-arrow">chevron_right</span>
+          </button>
+          <button class="track" data-track="foundation" type="button">
+            <span class="track-num">04</span>
+            <div class="track-info">
+              <b>AI · 데이터 · 클라우드 · 보안</b>
+              <small>Digital Foundation</small>
+            </div>
+            <span class="material-symbols-rounded track-arrow">chevron_right</span>
+          </button>
+          <button class="track" data-track="business" type="button">
+            <span class="track-num">05</span>
+            <div class="track-info">
+              <b>비개발 · 전사공통</b>
+              <small>사업기획 · 영업 · 회계 · HR</small>
+            </div>
+            <span class="material-symbols-rounded track-arrow">chevron_right</span>
+          </button>
+        </div>
+
+        <article class="track-detail glass-panel" id="trackDetail">
+          <div class="track-detail-head">
+            <span class="track-icon" id="trackIcon">M</span>
+            <div class="track-title-block">
+              <p class="eyebrow" id="trackLabel">MOBILITY DIGITAL</p>
+              <h3 id="trackTitle">움직이는 제품을 안정적인 서비스로</h3>
+            </div>
+          </div>
+          <p class="track-summary" id="trackSummary">차량 SW 플랫폼, 차량 연동 서비스, 내비게이션과 정밀지도처럼 차량 안팎의 경험을 연결하는 영역입니다.</p>
+          <div class="detail-columns">
+            <div class="detail-col">
+              <div class="col-head">
+                <span class="material-symbols-rounded text-cyan">verified</span>
+                <h4>보여줄 핵심 증거</h4>
+              </div>
+              <ul id="trackEvidence"></ul>
+            </div>
+            <div class="detail-col">
+              <div class="col-head">
+                <span class="material-symbols-rounded text-blue">forum</span>
+                <h4>예상 꼬리 질문</h4>
+              </div>
+              <ul id="trackQuestions"></ul>
+            </div>
+          </div>
+          <div class="connection-box">
+            <div class="connection-label-row">
+              <span class="conn-tag">합격률을 높이는 한 줄 연결 공식</span>
+              <button class="copy-mini-btn" type="button" data-copy-target="trackExample" title="텍스트 복사">
+                <span class="material-symbols-rounded">content_copy</span> 복사하기
+              </button>
+            </div>
+            <p id="trackExample">“위치 데이터의 오차를 줄인 프로젝트 경험을 바탕으로, 끊김 없는 차량 연동 서비스 품질에 기여하겠습니다.”</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- STEP 02: Readiness Section -->
+    <section class="section dark-section" id="check">
+      <div class="section-heading light">
+        <div class="heading-left">
+          <p class="eyebrow"><span class="step-badge lime">STEP 02</span> READINESS ASSESSMENT</p>
+          <h2>완벽함이 아닌, 제출 가능한 상태로.</h2>
+        </div>
+        <p class="heading-desc">목록을 점검할수록 지원 준비도가 실시간 업데이트됩니다. 부족한 지점을 한눈에 파악하세요.</p>
+      </div>
+      
+      <div class="readiness-layout">
+        <aside class="score-card glass-panel">
+          <p class="score-header">PREPARATION PROGRESS</p>
+          
+          <div class="score-ring-container">
+            <svg class="score-svg" viewBox="0 0 100 100">
+              <circle class="score-bg-circle" cx="50" cy="50" r="42" />
+              <circle class="score-progress-circle" id="scoreProgressCircle" cx="50" cy="50" r="42" />
+            </svg>
+            <div class="score-text">
+              <strong id="scoreValue">0</strong>
+              <span class="percent">%</span>
+            </div>
+          </div>
+          
+          <h3 id="scoreMessage">첫 체크를 시작하세요</h3>
+          <p id="scoreAdvice">가장 먼저 기본 지원자격 및 마감 마일스톤을 확정하는 것이 좋습니다.</p>
+          <button class="button reset-btn" id="resetChecklist" type="button">
+            <span class="material-symbols-rounded">refresh</span> 진척도 초기화
+          </button>
+        </aside>
+        
+        <div class="checklist" id="checklist">
+          <div class="check-group glass-panel">
+            <div class="check-title">
+              <span class="check-group-num">01</span>
+              <div><b>지원 자격</b><small>공고 기본요건 일치도</small></div>
+            </div>
+            <label><input type="checkbox" data-weight="2"><span>학사 이상 학위를 2026년 8월까지 취득할 수 있다</span></label>
+            <label><input type="checkbox" data-weight="1"><span>희망 직무의 근무지·전형 방식을 공식 공고에서 확인했다</span></label>
+            <label><input type="checkbox" data-weight="1"><span>지원 마감보다 하루 이른 개인 마감을 정했다</span></label>
+          </div>
+          
+          <div class="check-group glass-panel">
+            <div class="check-title">
+              <span class="check-group-num">02</span>
+              <div><b>경험 무기</b><small>수치화된 증거 중심</small></div>
+            </div>
+            <label><input type="checkbox" data-weight="2"><span>직무와 연결할 대표 경험 2개를 골랐다</span></label>
+            <label><input type="checkbox" data-weight="2"><span>각 경험의 내 역할·행동·수치 결과를 적었다</span></label>
+            <label><input type="checkbox" data-weight="1"><span>GitHub·문서·발표자료 등 확인 가능한 결과물이 있다</span></label>
+          </div>
+          
+          <div class="check-group glass-panel">
+            <div class="check-title">
+              <span class="check-group-num">03</span>
+              <div><b>서류 & 테스트</b><small>검증 가능한 문장 만들기</small></div>
+            </div>
+            <label><input type="checkbox" data-weight="2"><span>지원 동기와 커리어 계획을 하나의 흐름으로 썼다</span></label>
+            <label><input type="checkbox" data-weight="1"><span>코딩테스트 또는 과제테스트 준비 유형을 확인했다</span></label>
+            <label><input type="checkbox" data-weight="1"><span>오탈자·링크·개인정보·파일 권한을 점검했다</span></label>
+          </div>
+          
+          <div class="check-group glass-panel">
+            <div class="check-title">
+              <span class="check-group-num">04</span>
+              <div><b>면접 설계</b><small>설명하고 방어하기</small></div>
+            </div>
+            <label><input type="checkbox" data-weight="2"><span>프로젝트의 기술 선택과 실패를 2분 안에 설명할 수 있다</span></label>
+            <label><input type="checkbox" data-weight="1"><span>현대오토에버여야 하는 이유를 사업과 연결했다</span></label>
+            <label><input type="checkbox" data-weight="1"><span>온라인 면접 장비·네트워크를 사전 점검했다</span></label>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Timeline Sprint Section -->
+    <section class="section sprint">
+      <div class="section-heading">
+        <div class="heading-left">
+          <p class="eyebrow"><span class="step-badge">ROADMAP</span> SPRINT TIMELINE</p>
+          <h2>12일 초집중 마일스톤</h2>
+        </div>
+        <p class="heading-desc">마감일 기준 역산 타임라인입니다. 시간 압축이 필요해도 단계별 선후관계는 반드시 유지해야 합니다.</p>
+      </div>
+      <div class="timeline-container">
+        <div class="timeline">
+          <div class="timeline-item now">
+            <div class="timeline-dot"></div>
+            <span class="timeline-day">D-12 ~ D-11</span>
+            <h3>직무 타겟 확정</h3>
+            <p>공고 분석을 통한 키워드 도출 및 내 대표 경험 2가지 연결</p>
+            <small>완료 지표: "내가 기여할 가설"을 한 문장으로 명확화</small>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-day">D-10 ~ D-7</span>
+            <h3>경험 증거 입증</h3>
+            <p>STAR 프레임 초안 작성, 깃허브 리드미 및 포트폴리오 데이터 보강</p>
+            <small>완료 지표: 경험별 정확한 내 액션과 기여율 수치 정리</small>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-day">D-6 ~ D-3</span>
+            <h3>서류 완성 & 보완</h3>
+            <p>지원동기 및 향후 커리어 융합, 문장의 구체성 소리내어 검토</p>
+            <small>완료 지표: 추상적 서술을 비즈니스 및 오토에버 사업으로 치환</small>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <span class="timeline-day">D-2 ~ D-DAY</span>
+            <h3>마감 및 전형 준비</h3>
+            <p>오류 링크·마감 파일 최종 검증 후 마감 최소 24시간 전 제출</p>
+            <small>완료 지표: 제출 페이지 캡처본 백업 및 테스트 일정 확정</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- STEP 03: Essay Section -->
+    <section class="section essay-section" id="essay">
+      <div class="section-heading">
+        <div class="heading-left">
+          <p class="eyebrow"><span class="step-badge">STEP 03</span> DRAFT & STORY</p>
+          <h2>자소서는 기여 가설 증명입니다.</h2>
+        </div>
+        <p class="heading-desc">추상적인 포부 대신, 현대오토에버 비즈니스 축(SDF, mobilgene 등)과 당신의 기여 계획을 조밀하게 맞추세요.</p>
+      </div>
+
+      <div class="essay-grid">
+        <div class="formula-card glass-panel">
+          <p class="eyebrow">1,000자 논리 배치 공식</p>
+          <ol class="formula-list">
+            <li>
+              <span class="num">01</span>
+              <div><b>WHY ROLE (200자)</b><span>내가 뛰어들어 해결하고 싶은 직무 도메인 문제</span></div>
+            </li>
+            <li>
+              <span class="num">02</span>
+              <div><b>PROOF & ACTION (450자)</b><span>가장 구체적인 개인 기여도와 수치화된 성과 증거</span></div>
+            </li>
+            <li>
+              <span class="num">03</span>
+              <div><b>WHY AUTOEVER (200자)</b><span>오토에버 핵심 비즈니스(SDF, mobilgene 등)와의 접점</span></div>
+            </li>
+            <li>
+              <span class="num">04</span>
+              <div><b>CAREER PATH (150자)</b><span>입사 후 기술 전문가로 어떻게 실적을 낼 것인가</span></div>
+            </li>
+          </ol>
+          <div class="avoid-box">
+            <div class="avoid-title">
+              <span class="material-symbols-rounded">cancel</span>
+              <b>반드시 피해야 할 서술</b>
+            </div>
+            <p class="avoid-bad">“글로벌 미래 모빌리티 시장을 선도하는 오토에버의 비전에 매료되어...”</p>
+            <p class="avoid-good">→ 누구나 복사해 갈 수 있는 평이한 문장 대신, 실제 현대오토에버의 기술 아키텍처와 관련된 고민으로 시작하세요.</p>
+          </div>
+        </div>
+
+        <div class="editor-card glass-panel" id="editorCard">
+          <div class="editor-head">
+            <div class="editor-info">
+              <p class="eyebrow">DRAFT COCKPIT</p>
+              <h3>지원동기 + 커리어 계획 에디터</h3>
+            </div>
+            <div class="editor-tools">
+              <span class="char-counter"><strong id="charCount">0</strong> / 1,000자</span>
+              <button class="icon-tool-btn" id="focusModeBtn" type="button" title="집중 쓰기 모드 토글">
+                <span class="material-symbols-rounded">fullscreen</span>
+              </button>
+            </div>
+          </div>
+          <textarea id="essayDraft" maxlength="1000" placeholder="하단의 직무 예시를 불러와 핵심 문맥을 나의 경험 데이터로 수정해 보세요."></textarea>
+          <div class="editor-actions">
+            <button class="button primary" id="loadExample" type="button">
+              <span class="material-symbols-rounded">download</span> 직무 맞춤 템플릿 로드
+            </button>
+            <button class="button ghost" id="copyEssay" type="button">
+              <span class="material-symbols-rounded">content_copy</span> 초안 전체 복사
+            </button>
+          </div>
+          <div class="coach-note">
+            <span class="coach-avatar"><span class="material-symbols-rounded">support_agent</span> COACH</span>
+            <p id="coachText">초안을 입력하시면 글의 품질과 구체성을 실시간으로 가이드해 드립니다.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- STAR Workbench -->
+      <div class="star-workbench glass-panel">
+        <div class="star-info">
+          <p class="eyebrow">EXPERIENCE FRAMEWORK</p>
+          <h3>STAR 성과 분해기</h3>
+          <p class="star-sub">에디터에 작성할 핵심 프로젝트를 행동 중심으로 잘게 조작하여 면접 답변용 무기로 재가공하세요. 자동 저장됩니다.</p>
+        </div>
+        <div class="star-fields">
+          <div class="star-input-group">
+            <label><span class="letter">S</span> Situation · 상황과 문제</label>
+            <textarea data-save="starS" placeholder="프로젝트에서 겪은 사용자적/기술적/업무적 문제는 무엇이었나요?"></textarea>
+          </div>
+          <div class="star-input-group">
+            <label><span class="letter">T</span> Task · 내 역할과 목표</label>
+            <textarea data-save="starT" placeholder="조직 안에서 내가 정확하게 기여하고 책임져야 했던 목표는 무엇인가요?"></textarea>
+          </div>
+          <div class="star-input-group">
+            <label><span class="letter">A</span> Action · 구체적 판단과 행동</label>
+            <textarea data-save="starA" placeholder="어떤 제약 속에서 어떤 대안을 두고 왜 이 기술을 택해 실행했나요?"></textarea>
+          </div>
+          <div class="star-input-group">
+            <label><span class="letter">R</span> Result · 정량적 성과와 교훈</label>
+            <textarea data-save="starR" placeholder="구현 후 성능/시간/비율 수치 변화와 다시 한다면 개선할 지점은?"></textarea>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="section portfolio">
+      <div class="section-heading">
+        <div class="heading-left">
+          <p class="eyebrow"><span class="step-badge">PORTFOLIO</span> TECH SPECS</p>
+          <h2>결과보다 결정의 과정을 기록하세요.</h2>
+        </div>
+        <p class="heading-desc">면접관은 단순 스펙 나열보다 설계 및 트레이드오프 판단을 통해 기술적 성숙도를 파악합니다.</p>
+      </div>
+      <div class="portfolio-grid">
+        <article class="portfolio-card glass-panel">
+          <div class="p-num">01</div>
+          <h3>직관적인 1줄 요약</h3>
+          <p>누가 겪던 어떤 기술적 문제를 왜 해결했는지 2문장 이내 정리</p>
+          <em class="p-example">예: 배포 지연으로 인한 오전 핵심 배치 병목 시간 개선</em>
+        </article>
+        <article class="portfolio-card glass-panel">
+          <div class="p-num">02</div>
+          <h3>나의 기여 지표 격리</h3>
+          <p>전체 협업 결과와 내가 직접 구현한 모듈을 분리하여 기여율 표기</p>
+          <em class="p-example">예: ETL 파이프라인 아키텍처 설계 및 쿼리 튜닝 100% 담당</em>
+        </article>
+        <article class="portfolio-card glass-panel">
+          <div class="p-num">03</div>
+          <h3>트레이드오프 논리</h3>
+          <p>이 기술을 택함으로써 포기했거나 보완해야 했던 제약 기술 분석</p>
+          <em class="p-example">예: 실시간 전송 속도보다 데이터 복구 안정성을 최우선 배치</em>
+        </article>
+        <article class="portfolio-card glass-panel">
+          <div class="p-num">04</div>
+          <h3>지표 비포 앤 애프터</h3>
+          <p>성능, 응답, 자원 절감, 장애 복구 시간 중 검증된 정량 지표 비교</p>
+          <em class="p-example">예: 대용량 데이터 처리 시간 기존 45분 → 12분 (73% 단축)</em>
+        </article>
+      </div>
+    </section>
+
+    <!-- STEP 04: Interview Section -->
+    <section class="section process-section" id="interview">
+      <div class="section-heading">
+        <div class="heading-left">
+          <p class="eyebrow"><span class="step-badge">STEP 04</span> INTERVIEW STRATEGY</p>
+          <h2>합류 프로세스와 면접관의 관점</h2>
+        </div>
+        <p class="heading-desc">공식 전형 로드맵입니다. 각 채용 전형의 특성과 평가 의도를 알면 더 정확히 답변을 맞출 수 있습니다.</p>
+      </div>
+      
+      <div class="process-line-container">
+        <div class="process-line">
+          <div class="process-step">
+            <span class="step-badge-round">01</span>
+            <b>서류 접수</b>
+            <small>적합성 및 요건 검토</small>
+          </div>
+          <span class="material-symbols-rounded process-arrow">arrow_forward</span>
+          <div class="process-step">
+            <span class="step-badge-round">02</span>
+            <b>HMAT + 코딩/과제</b>
+            <small>개발/구현 역량 필터링</small>
+          </div>
+          <span class="material-symbols-rounded process-arrow">arrow_forward</span>
+          <div class="process-step">
+            <span class="step-badge-round">03</span>
+            <b>1차 실무 면접</b>
+            <small>기술 역량 및 경험 심층 검증</small>
+          </div>
+          <span class="material-symbols-rounded process-arrow">arrow_forward</span>
+          <div class="process-step">
+            <span class="step-badge-round">04</span>
+            <b>2차 임원 면접</b>
+            <small>성장 가치관 및 조직 핏</small>
+          </div>
+          <span class="material-symbols-rounded process-arrow">arrow_forward</span>
+          <div class="process-step">
+            <span class="step-badge-round">05</span>
+            <b>채용 검진 & 합격</b>
+            <small>KMI 전국 연계 수검</small>
+          </div>
+        </div>
+      </div>
+
+      <div class="question-bank glass-panel">
+        <div class="question-nav">
+          <p class="eyebrow">QUESTION ENGINE</p>
+          <h3>질문의 출제 의도와 답변 설계를 점검하세요.</h3>
+          <div class="question-buttons">
+            <button class="active" data-question="project" type="button">
+              <span class="material-symbols-rounded">developer_mode_tv</span> 프로젝트 심층
+            </button>
+            <button data-question="company" type="button">
+              <span class="material-symbols-rounded">corporate_fare</span> 지원 동기
+            </button>
+            <button data-question="failure" type="button">
+              <span class="material-symbols-rounded">error</span> 극복 & 실패
+            </button>
+            <button data-question="culture" type="button">
+              <span class="material-symbols-rounded">handshake</span> 오토에버 인재상
+            </button>
+            <button data-question="bookmark" type="button" class="bookmark-tab-btn">
+              <span class="material-symbols-rounded">star</span> 나의 보관함 (<span id="bookmarkCount">0</span>)
+            </button>
+          </div>
+        </div>
+        <article class="question-detail">
+          <div class="detail-header-row">
+            <span class="q-tag" id="questionTag">PROJECT DEEP DIVE</span>
+            <button id="bookmarkToggleBtn" class="bookmark-action-btn" type="button" aria-label="질문 즐겨찾기 토글" title="질문 보관함 추가">
+              <span class="material-symbols-rounded">star</span>
+            </button>
+          </div>
+          <h3 id="questionText">“그 기술을 선택한 이유와 다른 대안은 무엇이었나요?”</h3>
+          <div class="intent-box">
+            <span class="material-symbols-rounded text-cyan">visibility</span>
+            <p id="questionIntent"><b>면접관 평가 포인트:</b> 단순 구현 경험이 아니라 제약 속에서 판단한 기준과 기술적 깊이</p>
+          </div>
+          <div class="frame-box">
+            <span class="material-symbols-rounded text-blue">architecture</span>
+            <div id="questionFrame"><b>답변 구조화 공식:</b><p>제약조건 → 비교한 대안 2개 → 선택 기준 → 결과 → 지금 다시 한다면</p></div>
+          </div>
+          <blockquote id="questionExample">“처리량보다 장애 복구 시간이 중요한 서비스였습니다. A와 B를 비교했고, 운영 복잡도가 낮은 B를 선택해 평균 복구 시간을 35% 줄였습니다.”</blockquote>
+          
+          <div id="bookmarkListContainer" class="bookmark-list-container hidden">
+            <h4>보관해둔 핵심 질문 목록</h4>
+            <div id="bookmarkEmptyState" class="bookmark-empty">
+              <span class="material-symbols-rounded">bookmarks</span>
+              <p>자주 연습하고 싶은 예상 질문들의 별표(★)를 눌러 보관해 보세요!</p>
+            </div>
+            <ul id="bookmarkList" class="bookmark-list"></ul>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Reference Gallery Section -->
+    <section class="section gallery">
+      <div class="section-heading">
+        <div class="heading-left">
+          <p class="eyebrow"><span class="step-badge">VISUAL GUIDES</span> REFERENCE CARDS</p>
+          <h2>전술 카드뉴스 아카이브</h2>
+        </div>
+        <p class="heading-desc">클릭하면 크게 볼 수 있으며, 모바일에서는 터치 슬라이드로 제공됩니다.</p>
+      </div>
+      <div class="gallery-strip">
+        <button type="button" data-image="assets/card-1.png" aria-label="채용 공고 핵심 보기">
+          <img src="assets/card-1.png" alt="2026년 3분기 신입채용 핵심 카드">
+          <div class="img-overlay"><span class="material-symbols-rounded">zoom_in</span></div>
+        </button>
+        <button type="button" data-image="assets/card-2.png" aria-label="개발직 취업전략 보기">
+          <img src="assets/card-2.png" alt="개발직 취업전략 카드">
+          <div class="img-overlay"><span class="material-symbols-rounded">zoom_in</span></div>
+        </button>
+        <button type="button" data-image="assets/card-3.png" aria-label="인프라 데이터 보안 전략 보기">
+          <img src="assets/card-3.png" alt="인프라 데이터 보안 전략 카드">
+          <div class="img-overlay"><span class="material-symbols-rounded">zoom_in</span></div>
+        </button>
+        <button type="button" data-image="assets/card-4.png" aria-label="비개발 전략 보기">
+          <img src="assets/card-4.png" alt="비개발 전사공통 전략 카드">
+          <div class="img-overlay"><span class="material-symbols-rounded">zoom_in</span></div>
+        </button>
+        <button type="button" data-image="assets/card-5.png" aria-label="중고신입 전략 보기">
+          <img src="assets/card-5.png" alt="중고신입 지원전략 카드">
+          <div class="img-overlay"><span class="material-symbols-rounded">zoom_in</span></div>
+        </button>
+      </div>
+    </section>
+
+    <!-- Source References Section -->
+    <section class="section sources">
+      <div class="sources-intro">
+        <p class="eyebrow">OFFICIAL SOURCE LOGS</p>
+        <h2>공식 채용 채널 연계</h2>
+        <p>확실한 준비를 위해 공식 사이트에서 공개한 FAQ, 개발자 인터뷰, 기업 기술 블로그 자료를 항상 크로스체크 하시는 것을 권장합니다.</p>
+      </div>
+      <div class="source-list">
+        <a href="https://career.hyundai-autoever.com/ko/newrecruit" target="_blank" rel="noreferrer">
+          <span class="source-num">01</span>
+          <div class="source-info">
+            <b>2026 신입 채용 본공고 페이지</b>
+            <small>현대오토에버 채용 사이트</small>
+          </div>
+          <span class="material-symbols-rounded open-arrow">north_east</span>
+        </a>
+        <a href="https://career.hyundai-autoever.com/ko/process1" target="_blank" rel="noreferrer">
+          <span class="source-num">02</span>
+          <div class="source-info">
+            <b>신입 채용 상세 프로세스</b>
+            <small>코딩/과제 테스트 진행 절차</small>
+          </div>
+          <span class="material-symbols-rounded open-arrow">north_east</span>
+        </a>
+        <a href="https://career.hyundai-autoever.com/ko/faq" target="_blank" rel="noreferrer">
+          <span class="source-num">03</span>
+          <div class="source-info">
+            <b>지원자 종합 FAQ</b>
+            <small>지원서 예정자 증명 서류 안내</small>
+          </div>
+          <span class="material-symbols-rounded open-arrow">north_east</span>
+        </a>
+        <a href="https://career.hyundai-autoever.com/ko/people" target="_blank" rel="noreferrer">
+          <span class="source-num">04</span>
+          <div class="source-info">
+            <b>현직 임직원 직무 인터뷰</b>
+            <small>실무 부서가 일하는 방식과 기술 스택</small>
+          </div>
+          <span class="material-symbols-rounded open-arrow">north_east</span>
+        </a>
+        <a href="https://www.hyundai-autoever.com/kor/about/summary/company-introduction/contents.do?cntnSeq=172" target="_blank" rel="noreferrer">
+          <span class="source-num">05</span>
+          <div class="source-info">
+            <b>현대오토에버 비즈니스 포트폴리오</b>
+            <small>모빌리티 SW 프로바이더 전략 비전 요약</small>
+          </div>
+          <span class="material-symbols-rounded open-arrow">north_east</span>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand">
+      <span class="brand-mark">E</span>
+      <span>EVER:READY 2.0</span>
+    </div>
+    <p class="footer-disclaimer">개인지원용 비공식 가이드 대시보드이며, 현대오토에버 공식 서비스가 아닙니다.</p>
+  </footer>
+
+  <!-- Focus Write Overlay -->
+  <div id="focusOverlay" class="focus-overlay-bg"></div>
+
+  <!-- Dialog for Image Zooming -->
+  <dialog id="imageDialog">
+    <div class="dialog-content">
+      <button id="closeDialog" type="button" aria-label="닫기">
+        <span class="material-symbols-rounded">close</span>
+      </button>
+      <img id="dialogImage" alt="">
+    </div>
+  </dialog>
+
+  <!-- Toast Alert -->
+  <div class="toast" id="toast" role="status" aria-live="polite">복사 완료되었습니다.</div>
+  
+  <script src="app.js"></script>
+</body>
+</html>
